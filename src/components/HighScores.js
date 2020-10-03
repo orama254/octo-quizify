@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useFirebase } from './Firebase/FirebaseContext';
 
 export default function HighScores() {
@@ -42,7 +43,9 @@ export default function HighScores() {
                         <li key={record.key} className='high-score'>
                             {record.name} - {record.score}</li>
                     )}
+                    
                     </div>
+                    <Link to="/" className="btn"> Go back </Link>
             </>
             )}
         </>
